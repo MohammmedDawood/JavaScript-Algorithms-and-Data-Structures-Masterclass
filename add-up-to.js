@@ -1,4 +1,4 @@
-// add up to n slowly
+// add up to n slowly perform 5n+2 operations
 // function addUpTo(n) {
 //   let total = 0;
 //   for (let i = 1; i <= n; i++) {
@@ -7,7 +7,7 @@
 //   return total;
 // }
 
-// add up to n quickly
+// add up to n quickly perform 3 operations constantly
 function addUpTo(n) {
   return (n * (n + 1)) / 2;
 }
