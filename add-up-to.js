@@ -1,7 +1,7 @@
 // https://rithmschool.github.io/function-timer-demo/
 // check this link for more information
 
-// add up to n slowly perform 5n+2 operations
+// add up to n slowly perform 5n+2 operations O(n)
 // function addUpTo(n) {
 //   let total = 0;
 //   for (let i = 1; i <= n; i++) {
@@ -10,7 +10,7 @@
 //   return total;
 // }
 
-// add up to n quickly perform 3 operations constantly
+// add up to n quickly perform 3 operations constantly O(1)
 function addUpTo(n) {
   return (n * (n + 1)) / 2;
 }
