@@ -1,3 +1,6 @@
+// https://rithmschool.github.io/function-timer-demo/
+// check this link for more information
+
 // add up to n slowly perform 5n+2 operations
 // function addUpTo(n) {
 //   let total = 0;
