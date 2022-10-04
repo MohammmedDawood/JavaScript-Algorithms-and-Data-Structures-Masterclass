@@ -37,22 +37,38 @@
 // Can you think of other ways to refactor?
 // How have other people solved this problem?
 
+// function charCounter(str) {
+//   //1. make an object to return at end
+//   let result = {};
+//   //2. loop over string, for each character...
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i].toLowerCase();
+//     //2.3 if character is something else (space, period, etc.) don't do anything
+//     if (/[a-z0-9]/.test(char)) {
+//       //2.1 if the char is a number/letter AND is a key in object, add one to count
+//       if (result[char] > 0) {
+//         result[char]++;
+//       }
+//       //2.2 if the char is a number/letter AND not in object, add it and set value to 1
+//       else {
+//         result[char] = 1;
+//       }
+//     }
+//   }
+//   //3. return object at end
+//   return result;
+// }
+
+// refactor 1
 function charCounter(str) {
   //1. make an object to return at end
   let result = {};
   //2. loop over string, for each character...
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i].toLowerCase();
+  for (let char of str) {
+    char = char.toLowerCase();
     //2.3 if character is something else (space, period, etc.) don't do anything
     if (/[a-z0-9]/.test(char)) {
-      //2.1 if the char is a number/letter AND is a key in object, add one to count
-      if (result[char] > 0) {
-        result[char]++;
-      }
-      //2.2 if the char is a number/letter AND not in object, add it and set value to 1
-      else {
-        result[char] = 1;
-      }
+      result[char] = ++result[char] || 1;
     }
   }
   //3. return object at end
