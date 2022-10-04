@@ -60,18 +60,39 @@
 // }
 
 // refactor 1
+// function charCounter(str) {
+//   let result = {};
+//   for (let char of str) {
+//     char = char.toLowerCase();
+//     if (/[a-z0-9]/.test(char)) {
+//       result[char] = ++result[char] || 1;
+//     }
+//   }
+//   return result;
+// }
+
+// refactor 2
+// faster than the using regex
+function isAlphaNumeric(char) {
+  let code = char.charCodeAt(0);
+  if (
+    !(code > 47 && code < 58) && // numeric (0-9)
+    !(code > 64 && code < 91) && // upper alpha (A-Z)
+    !(code > 96 && code < 123) // lower alpha (a-z)
+  ) {
+    return false;
+  }
+  return true;
+}
+
 function charCounter(str) {
-  //1. make an object to return at end
   let result = {};
-  //2. loop over string, for each character...
   for (let char of str) {
-    char = char.toLowerCase();
-    //2.3 if character is something else (space, period, etc.) don't do anything
-    if (/[a-z0-9]/.test(char)) {
+    if (isAlphaNumeric(char)) {
+      char = char.toLowerCase();
       result[char] = ++result[char] || 1;
     }
   }
-  //3. return object at end
   return result;
 }
 
