@@ -4,7 +4,6 @@
 // Otherwise it returns false.
 
 function isPalindrome(str) {
-  console.log(str);
   if (str.length === 0) return true;
   if (str[0] !== str[str.length - 1]) return false;
   return isPalindrome(str.slice(1, str.length - 1));
