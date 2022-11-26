@@ -11,7 +11,7 @@ function binarySearch(arr, val) {
     else start = middle + 1;
     middle = Math.floor((start + end) / 2);
   }
-  arr[middle] === val ? middle : -1;
+  return arr[middle] === val ? middle : -1;
 }
 
 console.log(binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 15)); // -1
