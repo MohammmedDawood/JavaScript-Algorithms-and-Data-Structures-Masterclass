@@ -1,6 +1,10 @@
 // Write a function called binarySearch which accepts a
 // sorted array and a value and returns the index at which the value exists.
-// Otherwise, return
+// Otherwise, return -1.
+
+// This algorithm should be more efficient than linearSearch
+// complexity: O(log n) worst and average case
+// complexity: O(1) best case (if the value is in the middle)
 
 function binarySearch(arr, val) {
   let start = 0;
